@@ -15,9 +15,9 @@ export class ActualNewsComponent {
 
   constructor() {
     this.reducers = {
-      news: fromStore.reducer
+      news: fromStore.reducer,
     }
-    this.store = new fromStore.Store(this.reducers);
+    this.store = new fromStore.Store(this.reducers,);
   }
 
   performAction() {

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AngularCovidTracker/AngularCovidTracker.iml" filepath="$PROJECT_DIR$/AngularCovidTracker/AngularCovidTracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reactive-Angular-NGRx.iml" filepath="$PROJECT_DIR$/Reactive-Angular-NGRx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reactive-js-sample/reactive-js-sample.iml" filepath="$PROJECT_DIR$/reactive-js-sample/reactive-js-sample.iml" />
+    </modules>
+  </component>
+</project>

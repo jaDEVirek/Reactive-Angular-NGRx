@@ -23,14 +23,15 @@ export class Store {
     // }
   }
 
-  private reduce(state, action) {
-    const newState : {[key: string]: any } = {};
+  private reduce(state:any, action:any) {
+    const newState : any = {};
     for(const prop in this.reducers){
        newState[prop] =  this.reducers[prop](state[prop],action);
     }
     switch(action.type){
       case 'SEARCH ACTION' : {
         const newData = action.searchItem
+        console.log(state)
         const news = [...state.data, newData];
         return {...state,news,}
       }
