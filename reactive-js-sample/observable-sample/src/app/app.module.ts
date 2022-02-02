@@ -4,14 +4,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {RxjsSamplerComponent} from './rxjs-sampler/rxjs-sampler.component';
-import { MoviePageComponent } from './movie-page/movie-page.component';
+import { MoviesPageComponent } from './movie-page/movie-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RxjsSamplerComponent,
-    MoviePageComponent,
+    MoviesPageComponent,
   ],
   imports: [
     BrowserModule,

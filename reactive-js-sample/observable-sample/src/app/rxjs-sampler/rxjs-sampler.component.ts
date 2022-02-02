@@ -32,6 +32,7 @@ export class RxjsSamplerComponent implements OnInit {
 
   performAnAction() {
      fromEvent(this.butt.nativeElement, 'click').subscribe(this.observer);
+
  new Observable((observer) => {
       observer.next("nextVal");
       setTimeout(() => observer.complete(), 2000);
