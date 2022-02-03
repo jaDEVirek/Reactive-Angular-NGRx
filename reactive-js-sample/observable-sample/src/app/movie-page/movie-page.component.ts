@@ -1,23 +1,31 @@
-import {Component} from '@angular/core';
-import {Movie, MoviesService} from "../services/services";
-import {Observable, async} from "rxjs";
-import {Store} from "@ngrx/store";
+import { Component, OnInit } from '@angular/core';
+
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import {Movie} from "../services/services";
+
 
 
 @Component({
+  selector: 'app-movies-page',
   template: `
     <li *ngFor="let movie of movies$ | async">
-      {{ movie.name }}
+      {{ movie.name}}
     </li>
   `
 })
+export class MoviesPageComponent implements OnInit {
 
-export class MoviesPageComponent {
-  movies$: Observable<Movie[]> = this.store.select(state => state.movies);
+  movies$: Observable<Movie[]> = this.store.select(
+    state =>state.movies
+  );
 
-  constructor(private store: Store<{ movies: Movie[] }>) {}
+  constructor(
+    private store: Store<{ movies: Movie[]}>,
+  ) { }
 
-  ngOnInit() {
-    this.store.dispatch({ type: '[Movies Page] Load Movies' });
+  ngOnInit(): void {
+    this.store.dispatch({ type: '[Movies Page] Load Movies'});
   }
+
 }

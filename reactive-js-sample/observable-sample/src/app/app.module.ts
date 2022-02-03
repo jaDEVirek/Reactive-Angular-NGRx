@@ -5,6 +5,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {RxjsSamplerComponent} from './rxjs-sampler/rxjs-sampler.component';
 import { MoviesPageComponent } from './movie-page/movie-page.component';
+import {EffectsModule} from "@ngrx/effects";
+import {MovieEffects} from "./services/services";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
@@ -16,6 +19,8 @@ import { MoviesPageComponent } from './movie-page/movie-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    EffectsModule.forRoot([MovieEffects]),
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
